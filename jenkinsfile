@@ -22,7 +22,7 @@ pipeline{
                 sh "nexus"
             }
         }    
-    }
+    
 stage("Testing Maven"){
             steps {
                 sh "mvn -version"
