@@ -16,8 +16,8 @@ pipeline{
             steps{
                 sh 'mvn compile'
         }
-}
-stage("NEXUS") {
+    }
+        stage("NEXUS") {
             steps {
                 sh "nexus"
             }
