@@ -22,13 +22,11 @@ pipeline{
                 sh 'mvn compile'
         }
     }
-    
         stage("Testing Maven"){
             steps {
                 sh "mvn -version"
             }
         }
     
-
     }
 }
