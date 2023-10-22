@@ -12,11 +12,6 @@ pipeline{
                 echo "Pulling"
             }
         }
-        stage("NEXUS") {
-            steps {
-                sh "nexus"
-            }
-        }
         stage('MVN COMPILE') {
             steps{
                 sh 'mvn compile'
@@ -25,6 +20,11 @@ pipeline{
         stage("Testing Maven"){
             steps {
                 sh "mvn -version"
+            }
+        }
+        stage("NEXUS") {
+            steps {
+                sh "nexus"
             }
         }
     
