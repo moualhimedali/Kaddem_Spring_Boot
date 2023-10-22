@@ -9,7 +9,8 @@ pipeline{
         }
         stage("Chekout Git"){
             steps {
-                echo "Pulling"
+                //echo "Pulling"
+                git 'https://github.com/moualhimedali/Kaddem_Spring_Boot'
             }
         }
         stage('MVN COMPILE') {
